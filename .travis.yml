@@ -3,9 +3,9 @@ go:
 - 1.8.x
 before_install:
 - mkdir -p $GOPATH/bin
+- git clone --depth=50 https://github.com/Uninett/kubed.git Uninett/kubed
 - curl https://glide.sh/get | sh
-- mv $GOPATH/src/github.com/UNINETT $GOPATH/src/github.com/uninett
-- cd $GOPATH/src/github.com/uninett/kubed
+- cd $GOPATH/src/github.com/Uninett/kubed
 - glide install
 deploy:
   provider: releases
